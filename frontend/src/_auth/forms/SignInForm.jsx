@@ -115,6 +115,7 @@ const SignInForm = () => {
         <Link to={"/sign-up"} style={{textDecoration: "none", color:"inherit", fontWeight: "bold"}}>
           {" "}Enregistre toi!!
         </Link>
+        <a href="/sign-up">Enregitre toi</a>
       </p>
     </div>
 

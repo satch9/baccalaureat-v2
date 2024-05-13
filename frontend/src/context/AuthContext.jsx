@@ -24,15 +24,15 @@ const AuthProvider = ({ children }) => {
     const checkAuthPlayer = async () => {
         setIsLoading(true)
         try {
-            const currentAccount = await getCurrentPlayer()
+            const currentPlayer = await getCurrentPlayer()
 
-            console.log('currentAccount AuthContext ', currentAccount)
+            console.log('currentAccount AuthContext ', currentPlayer)
 
-            if (currentAccount) {
+            if (currentPlayer) {
                 setPlayer({
-                    id: currentAccount.$id,
-                    username: currentAccount.username,
-                    email: currentAccount.email,
+                    id: currentPlayer.$id,
+                    username: currentPlayer.username,
+                    email: currentPlayer.email,
                     password: ''
                 })
                 setIsAuthenticated(true)
@@ -51,6 +51,7 @@ const AuthProvider = ({ children }) => {
 
     useEffect(() => {
         const cookieFallBack = localStorage.getItem('cookieFallBack')
+        console.log("cookieFallBack",cookieFallBack)
         if (
             cookieFallBack === '[]' ||
             cookieFallBack === null ||
@@ -60,7 +61,8 @@ const AuthProvider = ({ children }) => {
         }
 
         checkAuthPlayer()
-    }, [navigate])
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [])
 
     const value = {
         player,

@@ -60,7 +60,7 @@ export async function signInAccount({ email, password }) {
     console.log('user.email', email)
     console.log('user.password', password)
 
-    const session = await account.createEmailSession(email, password)
+    const session = await account.createEmailPasswordSession(email, password)
 
     return session
   } catch (error) {
@@ -81,6 +81,10 @@ export async function signOut() {
 export async function getAccount() {
   try {
     const currentAccount = await account.get()
+    console.log('currentAccount function getAccount', currentAccount)
+    if (!currentAccount) {
+      throw Error
+    }
 
     return currentAccount
   } catch (error) {
@@ -92,23 +96,31 @@ export async function getCurrentPlayer() {
   try {
     const currentAccount = await getAccount()
 
-    console.log('currentAccount', currentAccount)
+    console.log('currentAccount function getCurrentPlayer', currentAccount)
 
     if (!currentAccount) {
       throw Error
     }
 
+    /* const currentPlayer = await databases.listDocuments(
+      appwriteConfig.databaseId,
+      appwriteConfig.playersCollectionId,
+      [Query.equal('playerId', currentAccount?.$id)],
+    ) */
+
     const currentPlayer = await databases.listDocuments(
       appwriteConfig.databaseId,
       appwriteConfig.playersCollectionId,
-      [Query.equal('workerId', currentAccount?.$id)],
+      [Query.equal('playerId', currentAccount?.$id)],
     )
+
+    console.log('currentPlayer function getCurrentPlayer', currentPlayer)
 
     if (!currentPlayer) throw Error
 
     //console.log("api currentWorker.documents[0]",currentWorker.documents)
 
-    return currentPlayer.documents[0]
+    return currentPlayer
   } catch (error) {
     console.error(error)
   }

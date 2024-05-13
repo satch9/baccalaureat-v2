@@ -1,8 +1,8 @@
 import { Outlet, Navigate } from 'react-router-dom'
-import { usePlayerContext } from '../hooks/usePlayer'
+
 
 const AuthLayout = () => {
-    const { isAuthenticated } = usePlayerContext()
+    const { isAuthenticated } = false
 
     return (
         <>
