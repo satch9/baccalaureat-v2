@@ -17,7 +17,7 @@ const Home = () => {
 
             {`Partie 1 :`}<br />
             {`  Une lettre est choisie au hasard.`}<br />
-            {`Au top départ, donné par l’un des joueurs (celui a créé la partie), le chronomètre est déclenché.
+            {`Au top départ, donné par l’un des joueurs (celui qui a créé la partie), le chronomètre est déclenché.
             Chaque joueur doit alors inscrire un maximum de mots commençant par la lettre choisie et ce,
             dans chaque catégorie (par exemple avec la lettre M, Montpellier pour la ville, marron pour la
             couleur…).`}<br /><br />

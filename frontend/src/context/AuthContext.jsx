@@ -26,13 +26,13 @@ const AuthProvider = ({ children }) => {
         try {
             const currentPlayer = await getCurrentPlayer()
 
-            console.log('currentAccount AuthContext ', currentPlayer)
+            //console.log('currentAccount AuthContext ', currentPlayer)
 
             if (currentPlayer) {
                 setPlayer({
-                    id: currentPlayer.$id,
-                    username: currentPlayer.username,
-                    email: currentPlayer.email,
+                    id: currentPlayer.documents[0].$id,
+                    username: currentPlayer.documents[0].username,
+                    email: currentPlayer.documents[0].email,
                     password: ''
                 })
                 setIsAuthenticated(true)
@@ -61,6 +61,7 @@ const AuthProvider = ({ children }) => {
         }
 
         checkAuthPlayer()
+    
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
