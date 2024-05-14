@@ -57,7 +57,7 @@ const SignInForm = () => {
     >
       <Form.Item
         name="email"
-        
+
         rules={[
           {
             required: true,
@@ -96,7 +96,7 @@ const SignInForm = () => {
           span: 24,
         }}
       >
-        <Button type="primary" htmlType="submit">
+        <Button htmlType="submit">
           {isLoading ? (
             <div className="flex-center gap-2">
               <Spin /> Chargement...

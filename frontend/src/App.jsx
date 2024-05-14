@@ -2,11 +2,16 @@ import './App.css'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import AuthProvider from "./context/AuthContext"
 
-import RootLayout from './_root/RootLayout.jsx'
+
 import AuthLayout from './_auth/AuthLayout.jsx'
 import SignInForm from './_auth/forms/SignInForm.jsx'
 import SignUpForm from './_auth/forms/SignUpForm.jsx'
-import Home from './_root/pages/Home';
+
+import RootLayout from './_root/RootLayout.jsx'
+import Home from './_root/pages/Home.jsx'
+import Parameters from './_root/pages/Parameters.jsx'
+import ListGame from './_root/pages/ListGame.jsx'
+import Scoreboard from './_root/pages/Scoreboard.jsx'
 
 function App() {
 
@@ -22,6 +27,9 @@ function App() {
           {/**Private Routes */}
           <Route element={<RootLayout />}>
             <Route index element={<Home />} />
+            <Route path="/parameters" element={<Parameters />} />
+            <Route path="/list-game/:categorie?/:chrono?" element={<ListGame />} />
+            <Route path="/scoreboard" element={<Scoreboard />} />
           </Route>
         </Routes>
       </AuthProvider>
