@@ -13,7 +13,7 @@ const Parameters = () => {
   const onValidateParameters = () => {
     console.log('selectedTagsCategorie onValidateParameters', selectedTagsCategorie)
     console.log('selectedTagsChrono onValidateParameters', selectedTagsChrono)
-    navigate('/list-game/'+selectedTagsCategorie+'/'+selectedTagsChrono)
+    navigate(`/list-game/${selectedTagsCategorie}/${selectedTagsChrono}`)
   }
 
   return (

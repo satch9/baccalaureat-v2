@@ -1,0 +1,31 @@
+/* AlphabetList.css */
+
+.alphabetList {
+    margin-bottom: 20px;
+    margin-top:20px;
+    padding: 10px;
+  }
+  
+  .alphabetList p {
+    font-weight: bold;
+  }
+  
+  .alphabetList ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .alphabetList li {
+    display: inline;
+    margin-right: 10px; /* Espacement entre les lettres */
+    font-size: 18px;
+  }
+  
+  .alphabetList li.selected {
+    text-decoration: line-through;
+    font-size: large;
+    font-weight: 600;
+    color:red;
+  }
+  

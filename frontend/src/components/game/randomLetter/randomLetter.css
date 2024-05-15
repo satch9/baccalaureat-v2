@@ -1,0 +1,30 @@
+/* RandomLetterButton.css */
+
+.randomLetterButton {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.randomLetterButton button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff;
+    /* Couleur de fond du bouton */
+    color: #fff;
+    /* Couleur du texte */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Animation de transition */
+}
+
+/* .randomLetterButton button:hover {
+    background-color: #0056b3;
+
+} */
+
+.randomLetterButton :disabled {
+    background-color: #0056b3;
+    cursor: not-allowed;
+}

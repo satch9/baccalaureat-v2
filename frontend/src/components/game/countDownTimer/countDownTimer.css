@@ -1,0 +1,13 @@
+.countdowntimer{
+    font-size: 42px;
+}
+
+.timerCircle{
+    border: 2px solid black;
+    border-radius: 50%;
+    
+}
+
+.timer{
+    padding:8px;
+}

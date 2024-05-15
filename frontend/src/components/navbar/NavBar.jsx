@@ -9,7 +9,7 @@ const NavBar = () => {
 
     const { isAuthenticated, setIsAuthenticated, setPlayer } = usePlayerContext()
     const navigate = useNavigate()
-    console.log("isAuthenticated NavBar", isAuthenticated)
+    //console.log("isAuthenticated NavBar", isAuthenticated)
 
     const signOutFonction = async () => {
         await signOut()

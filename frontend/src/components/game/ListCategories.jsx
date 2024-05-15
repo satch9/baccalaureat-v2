@@ -34,9 +34,9 @@ const ListCategories = ({ selectedTagsCategorie, setSelectedTagsCategorie }) => 
     )
 }
 
-ListCategories.PropTypes = {
+ListCategories.propTypes = {
     selectedTagsCategorie: PropTypes.arrayOf(PropTypes.string),
-    setSelectedTagsCategorie: PropTypes.func.isRequired
+    setSelectedTagsCategorie: PropTypes.func
 }
 
 export default ListCategories

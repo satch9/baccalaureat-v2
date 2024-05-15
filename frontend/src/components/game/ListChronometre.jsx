@@ -33,9 +33,9 @@ const ListChronometre = ({selectedTagsChrono, setSelectedTagsChrono}) => {
     )
 }
 
-ListChronometre.PropTypes = {
-    selectedTagsCategorie: PropTypes.arrayOf(PropTypes.string),
-    setSelectedTagsCategorie: PropTypes.func.isRequired
+ListChronometre.propTypes = {
+    selectedTagsChrono: PropTypes.arrayOf(PropTypes.string),
+    setSelectedTagsChrono: PropTypes.func
 }
 
 export default ListChronometre

@@ -79,6 +79,8 @@ const AuthProvider = ({ children }) => {
             {children}
         </AuthContext.Provider>
     )
+
+    
 }
 
 AuthProvider.propTypes = {
