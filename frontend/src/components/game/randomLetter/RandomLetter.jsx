@@ -1,12 +1,19 @@
 import { useState } from 'react'
-import './randomLetter.css'
-import PropTypes from 'prop-types'
 
-const RandomLetter = ({ selectedLetters, handleLetterSelected, setSelectedLetters }) => {
+import './randomLetter.css'
+
+import { useGameContext } from '../../../hooks/useGame';
+
+const RandomLetter = () => {
 
   const [isLoading, setIsLoading] = useState(false);
   const [timer, setTimer] = useState(null);
   const [countdown, setCountdown] = useState(0);
+  const {
+    selectedLetters,
+    handleLetterSelected,
+    setSelectedLetters,
+  } = useGameContext()
 
   const handleRandomLetterClick = () => {
     setIsLoading(true);
@@ -46,12 +53,6 @@ const RandomLetter = ({ selectedLetters, handleLetterSelected, setSelectedLetter
       </button>
     </div>
   )
-}
-
-RandomLetter.propTypes = {
-  selectedLetters: PropTypes.array, // Valider la prop selectedLetter
-  handleLetterSelected: PropTypes.func,
-  setSelectedLetters: PropTypes.func
 }
 
 export default RandomLetter

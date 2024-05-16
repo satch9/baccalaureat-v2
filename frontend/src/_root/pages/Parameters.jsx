@@ -8,7 +8,7 @@ const { Paragraph } = Typography
 
 const Parameters = () => {
   const [selectedTagsCategorie, setSelectedTagsCategorie] = useState(['Prénom féminin'])
-  const [selectedTagsChrono, setSelectedTagsChrono] = useState(['60'])
+  const [selectedTagsChrono, setSelectedTagsChrono] = useState(['5'])
   const navigate = useNavigate()
   const onValidateParameters = () => {
     console.log('selectedTagsCategorie onValidateParameters', selectedTagsCategorie)

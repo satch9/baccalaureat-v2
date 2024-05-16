@@ -81,7 +81,7 @@ export async function signOut() {
 export async function getAccount() {
   try {
     const currentAccount = await account.get()
-    //console.log('currentAccount function getAccount', currentAccount)
+    console.log('currentAccount function getAccount', currentAccount)
     if (!currentAccount) {
       throw Error
     }

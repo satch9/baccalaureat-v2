@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 // eslint-disable-next-line react/prop-types
 const ListChronometre = ({selectedTagsChrono, setSelectedTagsChrono}) => {
     
-    const tagsDataChrono = ['60', '90', '120', '150']
+    const tagsDataChrono = ['5', '90', '120', '150']
     const handleChange = (tag, checked) => {
         const nextSelectedTags = checked
             ? [tag]

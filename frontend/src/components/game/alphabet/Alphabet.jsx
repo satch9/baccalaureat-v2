@@ -1,8 +1,9 @@
-import PropTypes from 'prop-types'
 import './alphabet.css'
+import { useGameContext } from '../../../hooks/useGame'
 
-const Alphabet = ({ selectedLetters }) => {
+const Alphabet = () => {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  const {selectedLetters} = useGameContext()
   //console.log("selectedLetters",  selectedLetters)
   return (
     <div className="alphabetList">
@@ -15,10 +16,6 @@ const Alphabet = ({ selectedLetters }) => {
       </ul>
     </div>
   )
-}
-
-Alphabet.propTypes = {
-  selectedLetters: PropTypes.array // Valider la prop selectedLetter
 }
 
 export default Alphabet
